@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand */
+:root {
+  --brand:#0a3d62;      /* deep trust blue */
+  --brand-700:#08324a;
+  --accent:#f59e0b;     /* warm highlight */
+  --muted:#f7fafc;
+}
+
+html,body,#__next { height: 100%; }
+
+a { color: var(--brand); text-decoration: none; }
+.btn { @apply inline-block rounded-full px-5 py-3 font-semibold transition; }
+.btn-primary { background: var(--brand); color: white; }
+.btn-primary:hover { background: var(--brand-700); }
+.btn-accent { background: var(--accent); color: white; }
+.section { @apply max-w-6xl mx-auto px-4 py-14; }
+.h1 { @apply text-3xl md:text-5xl font-bold text-slate-900; }
+.h2 { @apply text-2xl md:text-3xl font-bold text-slate-900; }
+.p  { @apply text-base md:text-lg text-slate-700; }
+.card { @apply bg-white rounded-xl shadow-sm p-6; }
+
+/* small utilities */
+.kicker { @apply text-sm text-slate-500 uppercase tracking-wide font-semibold; }
+.container { @apply max-w-6xl mx-auto px-4; }
+.footer-link { @apply text-slate-300 hover:text-white; }
+
+/* responsive image helper */
+.hero-img { width:100%; height:420px; object-fit:cover; border-radius: 12px; }
